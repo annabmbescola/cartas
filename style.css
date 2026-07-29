@@ -15,6 +15,7 @@ body {
 
 main { 
     flex: 1; 
+    padding: 20px;
 } 
 
 /* Cabeçalho */
@@ -31,10 +32,19 @@ h1 {
     font-size: 24px; 
 } 
 
+/* Organização das seções de cartões */
+section { 
+    display: flex; 
+    gap: 16px; 
+    flex-wrap: wrap; /* Garante que os cartões pulem de linha no celular */
+    margin-top: 20px;
+} 
+
 /* Estrutura do Flashcard */
 .cartao {
     width: 260px;
     height: 200px;
+    perspective: 1000px; /* Efeito de profundidade 3D */
 }
 
 .cartao-imagem {
@@ -43,19 +53,40 @@ h1 {
 
 .cartao-imagem img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-/* --- NOVOS CÓDIGOS DO ALURA (Efeito de sobreposição e sombra) --- */
+/* Efeito de Giro 3D */
 .cartao-interno { 
-  position: relative; 
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d; 
 } 
 
+/* Gira o cartão quando o mouse passa por cima */
+.cartao:hover .cartao-interno { 
+    transform: rotateY(180deg); 
+} 
+
+/* Configuração dos dois lados */
 .cartao-frente, .cartao-verso { 
-  position: absolute; 
-  border-radius: 12px; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    backface-visibility: hidden; /* Esconde o lado oposto ao virar */
+} 
+
+/* Prepara o verso girado 180 graus */
+.cartao-verso { 
+    transform: rotateY(180deg); 
 } 
 
 /* Rodapé */
