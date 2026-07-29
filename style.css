@@ -1,11 +1,11 @@
-/* Reset básico para zerar margens e paddings */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Estilização geral do corpo da página */
+
 body { 
     display: flex; 
     flex-direction: column; 
