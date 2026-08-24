@@ -1,4 +1,4 @@
-
+/* Reset básico */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,6 +10,7 @@ body {
     flex-direction: column; 
     min-height: 100vh; 
     background-color: #f5f2f2; 
+    font-family: sans-serif;
 } 
 
 main { 
@@ -17,6 +18,7 @@ main {
     padding: 20px;
 } 
 
+/* Cabeçalho e Rodapé */
 header, footer { 
     background-color: #7e3e1c; 
     padding: 15px 25px; 
@@ -29,72 +31,61 @@ header {
     align-items: center; 
 }
 
-
+/* Caixa que segura os cartões */
 .lista-cartoes { 
     display: flex; 
     gap: 16px; 
-    flex-wrap: wrap; /* Faz os cartões descerem pra próxima linha se faltar espaço */
+    flex-wrap: wrap; 
     margin-top: 20px;
 } 
 
-
-
-/* A Moldura (Fica parada) */
+/* ESTRUTURA DO CARTÃO 3D */
 .cartao {
     width: 260px;
     height: 200px;
-    /* 'perspective' é a distância que você está olhando. Dá a ilusão de 3D! */
     perspective: 1000px; 
 }
 
-/* A tela que vai girar dentro da moldura */
 .giro { 
     position: relative; 
     width: 100%;
     height: 100%;
-    /* Tempo da animação: demora 0.8 segundos para girar */
     transition: transform 0.8s; 
-    /* Avisa o navegador: "Ei, me trate como um objeto 3D!" */
     transform-style: preserve-3d; 
 } 
 
-/* O GATILHO: Quando o mouse (hover) passar no .cartao, gire a caixa .giro */
 .cartao:hover .giro { 
-    /* Gira 180 graus no eixo Y (como um pião) */
     transform: rotateY(180deg); 
 } 
 
-/* =========================================
-   4. AS FACES DO CARTÃO (Frente e Verso)
-   ========================================= */
-
-/* Regras que servem tanto para a frente quanto pro verso */
+/* Lados do Cartão (Frente e Verso) */
 .frente, .verso { 
-    position: absolute; /* Coloca uma foto exatamente em cima da outra */
+    position: absolute; 
     width: 100%;
     height: 100%;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 12px; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-    
-    /* O GRANDE SEGREDO: backface-visibility
-       Isso faz com que as "costas" da foto fiquem invisíveis. 
-       Se você tirar isso, vai ver a foto da frente espelhada quando girar! */
     backface-visibility: hidden; 
 } 
 
-/* O verso precisa já começar virado de costas! */
 .verso { 
     transform: rotateY(180deg); 
 } 
 
-/* =========================================
-   5. AS IMAGENS
-   ========================================= */
+/* Estilo das imagens dentro dos cartões */
 .frente img, .verso img {
     width: 100%;
-    height: 120px;
-    object-fit: cover; /* Corta a imagem bonitinho para caber na caixa sem achatar */
+    height: 110px;
+    object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Estilo do texto */
+.frente p, .verso p {
+    font-size: 14px;
+    text-align: center;
+    color: #333;
 }
