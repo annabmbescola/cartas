@@ -1,183 +1,123 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Cartas</title>
-
+    <title>Confere Aí</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
-
-
     <header class="cabecalho">
-
         <h1>Confere Aí</h1>
-
         <nav>
-
             <a href="#" style="color: whitesmoke; text-decoration: none;">Início</a>
-
         </nav>
-
     </header>
 
-
-
     <main>
-
         <h2>Descubra a verdade passando o mouse</h2>
-
         
-
-        <section class="cartoes">
-
+        <!-- Coloquei o justify-content aqui para centralizar sem você precisar mudar o CSS -->
+        <section class="cartoes" style="justify-content: center; display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px;">
             
-
-            <article class="cartao">
-
-                <div class="cartao-interno">
-
-                    <div class="cartao-frente">
-
-                        <div class="cartao-imagem">
-
-                            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim">
-
-                        </div>
-
-                        <p>Pinguins conseguem voar como pássaros!</p>
-
-                    </div>
-
-                    <div class="cartao-verso">
-
-                        <div class="cartao-imagem">
-
-                            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim">
-
-                        </div>
-
-                        <p>Pinguins não voam, mas são excelentes nadadores.</p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <article class="cartao">
-
-                <div class="cartao-interno">
-
-                    <div class="cartao-frente">
-
-                        <div class="cartao-imagem">
-
-                            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim">
-
-                        </div>
-
-                        <p>Gatos enxergam na escuridão total?</p>
-
-                    </div>
-
-                    <div class="cartao-verso">
-
-                        <div class="cartao-imagem">
-
-                            <img src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/mm1012723121410486.jpg?w=1900&h=2849" alt="Pinguim">
-
-                        </div>
-
-                        <p>Não na escuridão total, mas enxergam muito bem com pouca luz!</p>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-<!-- Cartão 3: Camaleão -->
+            <!-- Cartão 1: Propriedades da luz -->
             <article class="cartao">
                 <div class="cartao-interno">
                     <div class="cartao-frente">
                         <div class="cartao-imagem">
-                            <img src="https://images.unsplash.com/photo-1538356391448-f99a3776e01a?q=80&w=600&auto=format&fit=crop" alt="Camaleão">
+                            <img src="https://images.unsplash.com/photo-1533036979201-d7ce9fbab5d7?q=80&w=600&auto=format&fit=crop" alt="Feixes de luz">
                         </div>
-                        <p>Camaleões mudam de cor para se esconder no ambiente?</p>
+                        <p>A luz viaja mais rápido que o som?</p>
                     </div>
                     <div class="cartao-verso">
                         <div class="cartao-imagem">
-                            <img src="https://images.unsplash.com/photo-1538356391448-f99a3776e01a?q=80&w=600&auto=format&fit=crop" alt="Camaleão">
+                            <img src="https://images.unsplash.com/photo-1533036979201-d7ce9fbab5d7?q=80&w=600&auto=format&fit=crop" alt="Feixes de luz">
                         </div>
-                        <p>Eles mudam de cor principalmente para controlar a temperatura do corpo e se comunicar!</p>
+                        <p>Sim! Ela viaja a incríveis 300 mil km/s. É por isso que vemos o relâmpago antes de ouvir o trovão.</p>
                     </div>
                 </div>
             </article>
 
-            <!-- Cartão 4: Touro -->
+            <!-- Cartão 2: Reflexão e espelhos -->
             <article class="cartao">
                 <div class="cartao-interno">
                     <div class="cartao-frente">
                         <div class="cartao-imagem">
-                            <img src="https://images.unsplash.com/photo-1570146039130-9b626e2e28fb?q=80&w=600&auto=format&fit=crop" alt="Touro">
+                            <img src="https://images.unsplash.com/photo-1502307100811-6bdc0981a85b?q=80&w=600&auto=format&fit=crop" alt="Espelho refletindo o céu">
                         </div>
-                        <p>Touros ficam com muita raiva quando veem a cor vermelha?</p>
+                        <p>Como os espelhos refletem nossa imagem tão perfeitamente?</p>
                     </div>
                     <div class="cartao-verso">
                         <div class="cartao-imagem">
-                            <img src="https://images.unsplash.com/photo-1570146039130-9b626e2e28fb?q=80&w=600&auto=format&fit=crop" alt="Touro">
+                            <img src="https://images.unsplash.com/photo-1502307100811-6bdc0981a85b?q=80&w=600&auto=format&fit=crop" alt="Espelho refletindo o céu">
                         </div>
-                        <p>Mito! Touros não enxergam a cor vermelha. Eles atacam por causa do movimento da capa.</p>
+                        <p>Eles possuem uma superfície polida que causa a "reflexão regular", rebatendo os raios de luz sem espalhá-los.</p>
                     </div>
                 </div>
             </article>
 
+            <!-- Cartão 3: Fenômenos da luz -->
             <article class="cartao">
                 <div class="cartao-interno">
                     <div class="cartao-frente">
                         <div class="cartao-imagem">
-                            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=600&auto=format&fit=crop" alt="Peixe-dourado">
+                            <img src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=600&auto=format&fit=crop" alt="Arco-íris">
                         </div>
-                        <p>Peixes-dourados têm uma memória de apenas 3 segundos?</p>
+                        <p>O que causa a formação de um arco-íris no céu?</p>
                     </div>
                     <div class="cartao-verso">
                         <div class="cartao-imagem">
-                            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?q=80&w=600&auto=format&fit=crop" alt="Peixe-dourado">
+                            <img src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=600&auto=format&fit=crop" alt="Arco-íris">
                         </div>
-                        <p>Falso! Eles são muito inteligentes e podem lembrar de coisas por vários meses.</p>
+                        <p>A dispersão da luz! A luz do sol entra nas gotas de chuva, sofre refração e se divide em várias cores.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cartão 4: Lentes -->
+            <article class="cartao">
+                <div class="cartao-interno">
+                    <div class="cartao-frente">
+                        <div class="cartao-imagem">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=600&auto=format&fit=crop" alt="Lupa">
+                        </div>
+                        <p>Como funciona uma lupa comum?</p>
+                    </div>
+                    <div class="cartao-verso">
+                        <div class="cartao-imagem">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=600&auto=format&fit=crop" alt="Lupa">
+                        </div>
+                        <p>Ela usa uma lente convergente, que desvia os raios de luz para um único ponto, ampliando a imagem que vemos.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Cartão 5: Óptica do corpo humano -->
+            <article class="cartao">
+                <div class="cartao-interno">
+                    <div class="cartao-frente">
+                        <div class="cartao-imagem">
+                            <img src="https://images.unsplash.com/photo-1512850692650-ff3e670d8a57?q=80&w=600&auto=format&fit=crop" alt="Olho humano">
+                        </div>
+                        <p>Por que os míopes têm dificuldade de enxergar de longe?</p>
+                    </div>
+                    <div class="cartao-verso">
+                        <div class="cartao-imagem">
+                            <img src="https://images.unsplash.com/photo-1512850692650-ff3e670d8a57?q=80&w=600&auto=format&fit=crop" alt="Olho humano">
+                        </div>
+                        <p>O globo ocular é mais longo. A luz foca antes de chegar na retina, deixando a imagem borrada!</p>
                     </div>
                 </div>
             </article>
 
         </section>
-
     </main>
 
-
-
     <footer>
-
         <p>&copy; Confere Aí - Todos os direitos reservados</p>
-
     </footer>
 
-
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
-
