@@ -20,7 +20,7 @@ body {
 
     min-height: 100vh; 
 
-    background-color: white; 
+    background-color: whitesmoke; 
 
 } 
 
@@ -53,7 +53,7 @@ main {
 
 h1 { 
 
-    color: whitesmoke; 
+    color: dimgray; 
 
     font-size: 24px; 
 
@@ -171,7 +171,7 @@ footer {
 
     padding: 15px 25px; 
 
-    color: whitesmoke; 
+    color: dimgray; 
 
 }
 
