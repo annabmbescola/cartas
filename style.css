@@ -1,4 +1,4 @@
-/* Reset básico */
+
 
 * {
 
@@ -11,8 +11,6 @@
 }
 
 
-
-/* Estilização geral da página */
 
 body { 
 
@@ -37,12 +35,9 @@ main {
 } 
 
 
-
-/* Cabeçalho */
-
 .cabecalho { 
 
-    background-color: #7e3e1c; 
+    background-color: lightpink; 
 
     padding: 15px 25px; 
 
@@ -58,15 +53,11 @@ main {
 
 h1 { 
 
-    color: #fff; 
+    color: whitesmoke; 
 
     font-size: 24px; 
 
 } 
-
-
-
-/* Organização das seções de cartões */
 
 section { 
 
@@ -74,15 +65,13 @@ section {
 
     gap: 16px; 
 
-    flex-wrap: wrap; /* Garante que os cartões pulem de linha no celular */
-
+    flex-wrap: wrap; 
     margin-top: 20px;
 
 } 
 
 
 
-/* Estrutura do Flashcard */
 
 .cartao {
 
@@ -90,7 +79,7 @@ section {
 
     height: 200px;
 
-    perspective: 1000px; /* Efeito de profundidade 3D */
+    perspective: 1000px; 
 
 }
 
@@ -101,7 +90,6 @@ section {
     width: 100%;
 
 }
-
 
 
 .cartao-imagem img {
@@ -118,7 +106,6 @@ section {
 
 
 
-/* Efeito de Giro 3D */
 
 .cartao-interno { 
 
@@ -136,7 +123,6 @@ section {
 
 
 
-/* Gira o cartão quando o mouse passa por cima */
 
 .cartao:hover .cartao-interno { 
 
@@ -146,7 +132,6 @@ section {
 
 
 
-/* Configuração dos dois lados */
 
 .cartao-frente, .cartao-verso { 
 
