@@ -1,11 +1,12 @@
-/* Reset básico */
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS (O Básico)
+   ========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Estilização geral da página */
 body { 
     display: flex; 
     flex-direction: column; 
@@ -18,80 +19,88 @@ main {
     padding: 20px;
 } 
 
-/* Cabeçalho */
-.cabecalho { 
+header, footer { 
     background-color: #7e3e1c; 
     padding: 15px 25px; 
+    color: #fff; 
+} 
+
+header {
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-} 
+}
 
-h1 { 
-    color: #fff; 
-    font-size: 24px; 
-} 
-
-/* Organização das seções de cartões */
-section { 
+/* =========================================
+   2. CAIXA QUE SEGURA TODOS OS CARTÕES
+   ========================================= */
+.lista-cartoes { 
     display: flex; 
     gap: 16px; 
-    flex-wrap: wrap; /* Garante que os cartões pulem de linha no celular */
+    flex-wrap: wrap; /* Faz os cartões descerem pra próxima linha se faltar espaço */
     margin-top: 20px;
 } 
 
-/* Estrutura do Flashcard */
+/* =========================================
+   3. A MÁGICA DO CARTÃO 3D
+   ========================================= */
+
+/* A Moldura (Fica parada) */
 .cartao {
     width: 260px;
     height: 200px;
-    perspective: 1000px; /* Efeito de profundidade 3D */
+    /* 'perspective' é a distância que você está olhando. Dá a ilusão de 3D! */
+    perspective: 1000px; 
 }
 
-.cartao-imagem {
-    width: 100%;
-}
-
-.cartao-imagem img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Efeito de Giro 3D */
-.cartao-interno { 
+/* A tela que vai girar dentro da moldura */
+.giro { 
     position: relative; 
     width: 100%;
     height: 100%;
+    /* Tempo da animação: demora 0.8 segundos para girar */
     transition: transform 0.8s; 
+    /* Avisa o navegador: "Ei, me trate como um objeto 3D!" */
     transform-style: preserve-3d; 
 } 
 
-/* Gira o cartão quando o mouse passa por cima */
-.cartao:hover .cartao-interno { 
+/* O GATILHO: Quando o mouse (hover) passar no .cartao, gire a caixa .giro */
+.cartao:hover .giro { 
+    /* Gira 180 graus no eixo Y (como um pião) */
     transform: rotateY(180deg); 
 } 
 
-/* Configuração dos dois lados */
-.cartao-frente, .cartao-verso { 
-    position: absolute; 
+/* =========================================
+   4. AS FACES DO CARTÃO (Frente e Verso)
+   ========================================= */
+
+/* Regras que servem tanto para a frente quanto pro verso */
+.frente, .verso { 
+    position: absolute; /* Coloca uma foto exatamente em cima da outra */
     width: 100%;
     height: 100%;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 12px; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-    backface-visibility: hidden; /* Esconde o lado oposto ao virar */
+    
+    /* O GRANDE SEGREDO: backface-visibility
+       Isso faz com que as "costas" da foto fiquem invisíveis. 
+       Se você tirar isso, vai ver a foto da frente espelhada quando girar! */
+    backface-visibility: hidden; 
 } 
 
-/* Prepara o verso girado 180 graus */
-.cartao-verso { 
+/* O verso precisa já começar virado de costas! */
+.verso { 
     transform: rotateY(180deg); 
 } 
 
-/* Rodapé */
-footer { 
-    background-color: #7e3e1c; 
-    padding: 15px 25px; 
-    color: #fff; 
+/* =========================================
+   5. AS IMAGENS
+   ========================================= */
+.frente img, .verso img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover; /* Corta a imagem bonitinho para caber na caixa sem achatar */
+    border-radius: 8px;
 }
