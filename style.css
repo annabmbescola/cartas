@@ -104,7 +104,11 @@ main h2 {
 
 .cartao-verso { 
     transform: rotateY(180deg); 
-} 
+    /* Adicione estas 3 linhas abaixo para centralizar o texto: */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .cartao-frente p, .cartao-verso p {
     color: dimgray;
