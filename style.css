@@ -40,7 +40,6 @@ main h2 {
     margin-top: 20px;
 }
 
-/* Estilos das Novas Seções */
 .categoria {
     margin-bottom: 40px;
 }
@@ -61,14 +60,13 @@ main h2 {
     justify-content: flex-start; /* Alinha os cartões da categoria na esquerda */
 } 
 
-/* Estilos dos Cartões */
 .cartao {
     width: 260px;
     height: 200px;
     perspective: 1000px; 
 }
 
-.cartao-imagem {
+.imagem {
     width: 100%;
 }
 
@@ -79,7 +77,7 @@ main h2 {
     border-radius: 8px;
 }
 
-.cartao-interno { 
+.giro { 
     position: relative; 
     width: 100%;
     height: 100%;
@@ -87,11 +85,11 @@ main h2 {
     transform-style: preserve-3d; 
 } 
 
-.cartao:hover .cartao-interno { 
+.cartao:hover .giro { 
     transform: rotateY(180deg); 
 } 
 
-.cartao-frente, .cartao-verso { 
+.frente, .verso { 
     position: absolute; 
     width: 100%;
     height: 100%;
@@ -102,15 +100,14 @@ main h2 {
     backface-visibility: hidden; 
 } 
 
-.cartao-verso { 
+.verso { 
     transform: rotateY(180deg); 
-    /* Adicione estas 3 linhas abaixo para centralizar o texto: */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cartao-frente p, .cartao-verso p {
+.frente p, .verso p {
     color: dimgray;
     font-weight: bold;
     margin-top: 10px;
