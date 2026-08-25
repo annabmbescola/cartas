@@ -1,177 +1,122 @@
-
-
 * {
-
     box-sizing: border-box;
-
     margin: 0;
-
     padding: 0;
-
 }
-
-
 
 body { 
-
     display: flex; 
-
     flex-direction: column; 
-
     min-height: 100vh; 
-
     background-color: whitesmoke; 
-
+    font-family: Arial, sans-serif;
 } 
-
-
 
 main { 
-
     flex: 1; 
-
     padding: 20px;
-
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 } 
-
 
 .cabecalho { 
-
     background-color: lightpink; 
-
     padding: 15px 25px; 
-
     display: flex; 
-
     justify-content: space-between; 
-
     align-items: center; 
-
 } 
-
-
 
 h1 { 
-
     color: dimgray; 
-
     font-size: 24px; 
-
 } 
 
-section { 
-
-    display: flex; 
-
-    gap: 16px; 
-
-    flex-wrap: wrap; 
+main h2 {
+    text-align: center;
+    color: dimgray;
+    margin-bottom: 40px;
     margin-top: 20px;
-    justify-content: center; 
-} 
-
-
-
-
-.cartao {
-
-    width: 260px;
-
-    height: 200px;
-
-    perspective: 1000px; 
-
 }
 
+/* Estilos das Novas Seções */
+.categoria {
+    margin-bottom: 40px;
+}
 
+.categoria h3 {
+    color: dimgray;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 3px solid lightpink;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.cartoes { 
+    display: flex; 
+    gap: 16px; 
+    flex-wrap: wrap; 
+    justify-content: flex-start; /* Alinha os cartões da categoria na esquerda */
+} 
+
+/* Estilos dos Cartões */
+.cartao {
+    width: 260px;
+    height: 200px;
+    perspective: 1000px; 
+}
 
 .cartao-imagem {
-
     width: 100%;
-
 }
-
 
 .cartao-imagem img {
-
     width: 100%;
-
     height: 120px;
-
     object-fit: cover;
-
     border-radius: 8px;
-
 }
-
-
-
 
 .cartao-interno { 
-
     position: relative; 
-
     width: 100%;
-
     height: 100%;
-
     transition: transform 0.8s; 
-
     transform-style: preserve-3d; 
-
 } 
-
-
-
 
 .cartao:hover .cartao-interno { 
-
     transform: rotateY(180deg); 
-
 } 
-
-
-
 
 .cartao-frente, .cartao-verso { 
-
     position: absolute; 
-
     width: 100%;
-
     height: 100%;
-
     padding: 10px;
-
     background-color: lightpink;
-
     border-radius: 12px; 
-
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-
     backface-visibility: hidden; 
-
 } 
-
-
-
 
 .cartao-verso { 
-
     transform: rotateY(180deg); 
-
 } 
 
-
-
-
-footer { 
-
-    background-color: lightpink; 
-
-    padding: 15px 25px; 
-
-    color: dimgray; 
-
+.cartao-frente p, .cartao-verso p {
+    color: dimgray;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 13px;
+    text-align: center;
 }
 
+footer { 
+    background-color: lightpink; 
+    padding: 15px 25px; 
+    color: dimgray; 
+    text-align: center;
+}
