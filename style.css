@@ -20,6 +20,7 @@ main {
     width: 100%;
 } 
 
+/* Cabeçalho */
 .cabecalho { 
     background-color: lightpink; 
     padding: 15px 25px; 
@@ -33,13 +34,7 @@ h1 {
     font-size: 24px; 
 } 
 
-main h2 {
-    text-align: center;
-    color: dimgray;
-    margin-bottom: 40px;
-    margin-top: 20px;
-}
-
+/* Categorias e Títulos */
 .categoria {
     margin-bottom: 40px;
 }
@@ -53,17 +48,52 @@ main h2 {
     display: inline-block;
 }
 
+/* Grid de Cartões */
 .cartoes { 
     display: flex; 
     gap: 16px; 
     flex-wrap: wrap; 
-    justify-content: flex-start; /* Alinha os cartões da categoria na esquerda */
+    justify-content: flex-start;
 } 
 
+/* Estrutura do Flashcard */
 .cartao {
     width: 260px;
     height: 200px;
     perspective: 1000px; 
+}
+
+/* Animação de Giro 3D */
+.giro { 
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s; 
+    transform-style: preserve-3d; 
+} 
+
+.cartao:hover .giro { 
+    transform: rotateY(180deg); 
+} 
+
+/* Lados da Frente e Verso */
+.frente, .verso { 
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    background-color: lightpink;
+    border-radius: 12px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    backface-visibility: hidden; 
+    overflow: hidden; 
+}
+
+/* Frente do Cartão */
+.frente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .imagem {
@@ -77,38 +107,7 @@ main h2 {
     border-radius: 8px;   
 }
 
-.giro { 
-    position: relative; 
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s; 
-    transform-style: preserve-3d; 
-} 
-
-.cartao:hover .giro { 
-    transform: rotateY(180deg); 
-} 
-
-.frente, .verso { 
-    position: absolute; 
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    background-color: lightpink;
-    border-radius: 12px; 
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-    backface-visibility: hidden; 
-    overflow: hidden; 
-}
-
-.verso { 
-    transform: rotateY(180deg); 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.frente p, .verso p {
+.frente p {
     color: dimgray;
     font-weight: bold;
     margin-top: 10px;
@@ -116,104 +115,43 @@ main h2 {
     text-align: center;
 }
 
-.video {
-    width: 100%;
-    height: 130px;
-}
-
-.video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 8px;
-}
-
-.virado {
-    display: none;
-}
-
-.virado:checked ~ .giro {
-    transform: rotateY(180deg);
-}
-
-.girar {
-    display: inline-block;
-    margin-top: 6px;
-    padding: 4px 10px;
-    background-color: dimgray;
-    color: white;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-}
-
-.girar:hover {
-    background-color: #333;
-}
-
-.verso {
-    transform: rotateY(180deg);
+/* Verso do Cartão */
+.verso { 
+    transform: rotateY(180deg); 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 12px;
 }
 
-.experimentos {
-  padding: 40px 20px;
-  text-align: center;
+.verso p {
+    color: dimgray;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+    line-height: 1.4;
 }
 
-.cards-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.card-experimento {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  width: 300px;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.card-experimento h3 {
-  margin-top: 0;
-  color: #333333;
-}
-
-.card-experimento p {
-  color: #666666;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
+/* Botão "Ver vídeo" no Verso */
 .btn-video {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: #ff0000;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #ff0000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 11px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-video:hover {
-  background-color: #cc0000;
+    background-color: #cc0000;
+    transform: scale(1.05);
 }
 
+/* Rodapé */
 footer { 
     background-color: lightpink; 
     padding: 15px 25px; 
