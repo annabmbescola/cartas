@@ -20,7 +20,6 @@ main {
     width: 100%;
 } 
 
-/* Cabeçalho */
 .cabecalho { 
     background-color: lightpink; 
     padding: 15px 25px; 
@@ -34,7 +33,6 @@ h1 {
     font-size: 24px; 
 } 
 
-/* Categorias e Títulos */
 .categoria {
     margin-bottom: 40px;
 }
@@ -48,7 +46,6 @@ h1 {
     display: inline-block;
 }
 
-/* Grid de Cartões */
 .cartoes { 
     display: flex; 
     gap: 16px; 
@@ -56,14 +53,12 @@ h1 {
     justify-content: flex-start;
 } 
 
-/* Estrutura do Flashcard */
 .cartao {
     width: 260px;
     height: 200px;
     perspective: 1000px; 
 }
 
-/* Animação de Giro 3D */
 .giro { 
     position: relative; 
     width: 100%;
@@ -76,7 +71,6 @@ h1 {
     transform: rotateY(180deg); 
 } 
 
-/* Lados da Frente e Verso */
 .frente, .verso { 
     position: absolute; 
     width: 100%;
@@ -89,7 +83,6 @@ h1 {
     overflow: hidden; 
 }
 
-/* Frente do Cartão */
 .frente {
     display: flex;
     flex-direction: column;
@@ -115,7 +108,6 @@ h1 {
     text-align: center;
 }
 
-/* Verso do Cartão */
 .verso { 
     transform: rotateY(180deg); 
     display: flex;
@@ -133,8 +125,7 @@ h1 {
     line-height: 1.4;
 }
 
-/* Botão "Ver vídeo" no Verso */
-.btn-video {
+.video {
     display: inline-block;
     padding: 6px 14px;
     background-color: #ff0000;
@@ -146,12 +137,11 @@ h1 {
     transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.btn-video:hover {
+.video:hover {
     background-color: #cc0000;
     transform: scale(1.05);
 }
 
-/* Rodapé */
 footer { 
     background-color: lightpink; 
     padding: 15px 25px; 
