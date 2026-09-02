@@ -116,6 +116,52 @@ main h2 {
     text-align: center;
 }
 
+.video {
+    width: 100%;
+    height: 130px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+.virado {
+    display: none;
+}
+
+.virado:checked ~ .giro {
+    transform: rotateY(180deg);
+}
+
+.girar {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+    background-color: dimgray;
+    color: white;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.girar:hover {
+    background-color: #333;
+}
+
+.verso {
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+}
+
 footer { 
     background-color: lightpink; 
     padding: 15px 25px; 
