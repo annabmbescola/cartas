@@ -389,57 +389,68 @@
                         </div>
                     </div>
                 </article>
-                <section class="categoria">
-            <h3>Experimentos de Robótica</h3>
-            <div class="cartoes">
 
-                <article class="cartao">
-                    <div class="giro">
-                        <div class="frente">
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_1" title="LED e LDR" allowfullscreen></iframe>
-                            </div>
-                            <p>LED e LDR</p>
-                            <button class="btn-girar" onclick="girarCartao(this)">Ver detalhes</button>
-                        </div>
-                        <div class="verso">
-                            <p>Demonstração da variação da resistência do LDR conforme a luminosidade incidente, automatizando o acionamento do LED.</p>
-                            <button class="btn-girar" onclick="girarCartao(this)">Voltar ao vídeo</button>
-                        </div>
-                    </div>
-                </article>
+                
+               <section class="categoria">
+    <h3>Experimentos de Robótica</h3>
+    <div class="cartoes">
 
-                <article class="cartao">
-                    <div class="giro">
-                        <div class="frente">
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_2" title="Fenda Única e Dupla" allowfullscreen></iframe>
-                            </div>
-                            <p>Fenda Única e Dupla</p>
-                            <button class="btn-girar" onclick="girarCartao(this)">Ver detalhes</button>
-                        </div>
-                        <div class="verso">
-                            <p>Análise prática dos padrões de difração e interferência luminosa utilizando fendas e captura automatizada de dados.</p>
-                            <button class="btn-girar" onclick="girarCartao(this)">Voltar ao vídeo</button>
-                        </div>
+        <!-- Experimento 1 -->
+        <article class="cartao">
+            <input type="checkbox" id="card-ldr" class="virado">
+            <div class="giro">
+                <div class="frente">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_1" title="LED e LDR" allowfullscreen></iframe>
                     </div>
-                </article>
+                    <p>LED e LDR</p>
+                    <label for="card-ldr" class="girar">Ver detalhes</label>
+                </div>
+                <div class="verso">
+                    <p>Demonstração da variação da resistência do LDR conforme a luminosidade incidente, automatizando o acionamento do LED.</p>
+                    <label for="card-ldr" class="girar">Ver vídeo</label>
+                </div>
+            </div>
+        </article>
 
-                <article class="cartao">
-                    <div class="giro">
-                        <div class="frente">
-                            <div class="video-container">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1lTMSQiBREo?si=HH01GKyNjDovJHKC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
-                            </div>
-                            <p>Sensor de Gás e Fumaça</p>
-                            <button class="btn-girar" onclick="girarCartao(this)">Ver detalhes</button>
-                        </div>
-                        <div class="verso">
-                            <p>Sistema de monitoramento e alarme automatizado utilizando sensor para detecção de compostos gasosos e fumaça.</p>
-                            <button class="btn-girar" onclick="girarCartao(this)">Voltar ao vídeo</button>
-                        </div>
+        <!-- Experimento 2 -->
+        <article class="cartao">
+            <input type="checkbox" id="card-fenda" class="virado">
+            <div class="giro">
+                <div class="frente">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ID_DO_VIDEO_2" title="Fenda Única e Dupla" allowfullscreen></iframe>
                     </div>
-                </article>
+                    <p>Fenda Única e Dupla</p>
+                    <label for="card-fenda" class="girar">Ver detalhes</label>
+                </div>
+                <div class="verso">
+                    <p>Análise prática dos padrões de difração e interferência luminosa utilizando fendas e captura automatizada de dados.</p>
+                    <label for="card-fenda" class="girar">Ver vídeo</label>
+                </div>
+            </div>
+        </article>
+
+        <!-- Experimento 3 -->
+        <article class="cartao">
+            <input type="checkbox" id="card-gas" class="virado">
+            <div class="giro">
+                <div class="frente">
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/1lTMSQiBREo?si=HH01GKyNjDovJHKC" title="Sensor de Gás e Fumaça" allowfullscreen></iframe>
+                    </div>
+                    <p>Sensor de Gás e Fumaça</p>
+                    <label for="card-gas" class="girar">Ver detalhes</label>
+                </div>
+                <div class="verso">
+                    <p>Sistema de monitoramento e alarme automatizado utilizando sensor para detecção de compostos gasosos e fumaça.</p>
+                    <label for="card-gas" class="girar">Ver vídeo</label>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</section>
 
             </div>
         </section>
